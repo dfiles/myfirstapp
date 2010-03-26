@@ -15597,3 +15597,59 @@ Processing MessagesController#new (for 127.0.0.1 at 2010-03-24 23:32:30) [GET]
 Rendering template within layouts/application
 Rendering messages/new
 Completed in 80ms (View: 13, DB: 1) | 200 OK [http://localhost/messages/new?name=contact]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-03-25 19:54:27) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (1.5ms)[0m   [0;1mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 1) [0m
+Completed in 236ms (View: 145, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-03-25 19:54:29) [GET]
+  Parameters: {"name"=>"contact"}
+  [4;35;1mPage Load (0.8ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'contact') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering messages/new
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/messages/new?name=contact]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-03-25 19:54:31) [GET]
+  Parameters: {"name"=>"about"}
+  [4;35;1mPage Load (2.6ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.6ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'about') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 3) [0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages".parent_id = 3) [0m
+Completed in 16ms (View: 4, DB: 4) | 200 OK [http://localhost/about]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-03-25 19:54:38) [GET]
+  Parameters: {"name"=>"contact"}
+  [4;35;1mPage Load (0.8ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'contact') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering messages/new
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://localhost/messages/new?name=contact]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-03-25 19:54:39) [GET]
+  [4;35;1mPage Load (0.9ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/login]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-03-25 19:54:41) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 1) [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/home]
